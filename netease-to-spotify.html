@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>网易云音乐歌单转Spotify | Aursus</title><meta name="author" content="Aursus"><meta name="copyright" content="Aursus"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="人在美国留学，被网易云的定位限制版权折磨疯了，从一开始的一周一定位，到现在的一天n定位，甚至电脑版的也开始识别了定位了，实在忍不住转了spotify。不过好歹也是网易云9级玩家，存了好久的歌单得导出来。 网上扒拉了一下发现基本都是一个帖子，link（膜拜大佬）。不幸的是，貌似2022年5月份网易云更新了，但大佬并没有同步更新，所以目前测试下来该方法失效了。 不死心的我又去github上扒拉了一下，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网易云音乐歌单转Spotify">
+<meta property="og:url" content="http://example.com/netease-to-spotify.html">
+<meta property="og:site_name" content="Aursus">
+<meta property="og:description" content="人在美国留学，被网易云的定位限制版权折磨疯了，从一开始的一周一定位，到现在的一天n定位，甚至电脑版的也开始识别了定位了，实在忍不住转了spotify。不过好歹也是网易云9级玩家，存了好久的歌单得导出来。 网上扒拉了一下发现基本都是一个帖子，link（膜拜大佬）。不幸的是，貌似2022年5月份网易云更新了，但大佬并没有同步更新，所以目前测试下来该方法失效了。 不死心的我又去github上扒拉了一下，">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-07-01T04:30:23.000Z">
+<meta property="article:modified_time" content="2022-07-01T05:08:14.291Z">
+<meta property="article:author" content="Aursus">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/icon.png"><link rel="canonical" href="http://example.com/netease-to-spotify"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '网易云音乐歌单转Spotify',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-06-30 22:08:14'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Aursus</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">网易云音乐歌单转Spotify</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-07-01T04:30:23.000Z" title="Created 2022-06-30 21:30:23">2022-06-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-07-01T05:08:14.291Z" title="Updated 2022-06-30 22:08:14">2022-06-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="网易云音乐歌单转Spotify"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>人在美国留学，被网易云的定位限制版权折磨疯了，从一开始的一周一定位，到现在的一天n定位，甚至电脑版的也开始识别了定位了，实在忍不住转了spotify。不过好歹也是网易云9级玩家，存了好久的歌单得导出来。</p>
+<p>网上扒拉了一下发现基本都是一个帖子，<a target="_blank" rel="noopener" href="https://yyrcd.com/n2s/">link</a>（膜拜大佬）。不幸的是，貌似2022年5月份网易云更新了，但大佬并没有同步更新，所以目前测试下来该方法失效了。</p>
+<p>不死心的我又去github上扒拉了一下，目前可行的解决方案是：</p>
+<ol>
+<li><p>安装油猴脚本 TampermonkeyScript（超级好用！强烈安利！）</p>
+</li>
+<li><p>到这个<a target="_blank" rel="noopener" href="https://github.com/c4rO-0/TampermonkeyScript/tree/master/Mexporter">网址</a>（膜拜大佬x2）上，按照说明点击 <code>raw</code> 获取文件地址安装脚本。</p>
+</li>
+<li><p>打开网页版的网易云音乐，在歌单上面找到 <code>导出歌单</code> 的地方点击就可以获得一个txt文件（找不到的话就刷新一下，我一般都是直接切换歌单无法显示，刷新一下就出来了）</p>
+</li>
+</ol>
+<p><img src="/netease-to-spotify/pic1.png"></p>
+<ol start="4">
+<li>到 <a target="_blank" rel="noopener" href="https://www.tunemymusic.com/zh-cn/#step1">tune my music</a> 中，在step2中选择<code>从文本</code>，将txt文件中的内容复制出来粘贴进去，转换歌曲列表到spotify（会自动转跳spotify要登录还是授权，忘了），等着就行了</li>
+</ol>
+<br>
+
+<ul>
+<li><p>导入的是歌单名默认为 my playlist，需要手动修改，以及歌单的默认描述是tunemymusic的一串东西，介意的话可以删除</p>
+</li>
+<li><p>导了十几个歌单，感觉成功率还是挺高的，不过中文歌识别着实不太行，少数几个有重复识别。一般正常取名字的歌曲都可以导出，少数古典音乐和奇怪语种命名的歌曲无法识别，其他都挺好的</p>
+</li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/californiaone.html"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">一号公路</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By Aursus</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
