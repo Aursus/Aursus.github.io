@@ -48,7 +48,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-01-05 21:44:29'
+  postUpdate: '2024-01-05 21:57:29'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -137,160 +137,118 @@
       }
     }
     detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.2.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 小小家</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 语言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/en/"><i class="fa-fw fas fa-e"></i><span> English</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fas fa-c"></i><span> 中文</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Aursus</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 小小家</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 语言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/en/"><i class="fa-fw fas fa-e"></i><span> English</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fas fa-c"></i><span> 中文</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Aursus</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/Aursus" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:aursus.blog@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.linkedin.com/in/yuji-han/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-gradient-descent.html" title="生物医学工程 | 机器学习 - 凸优化">生物医学工程 | 机器学习 - 凸优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:50.000Z" title="发表于 2023-12-22 13:10:50">2023-12-22</time></span></div><div class="content">目的：学习optimize objective的有效方法——gradient descent。该方法基于convex function
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/icon.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 小小家</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 语言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/en/"><i class="fa-fw fas fa-e"></i><span> English</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fas fa-c"></i><span> 中文</span></a></li></ul></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background: linear-gradient(20deg, #0062be, #925696, #cc426e, #fb0347)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Aursus</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 小小家</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 类别</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-language"></i><span> 语言</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/en/"><i class="fa-fw fas fa-e"></i><span> English</span></a></li><li><a class="site-page child" href="/"><i class="fa-fw fas fa-c"></i><span> 中文</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Aursus</h1><div id="site_social_icons"><a class="social-icon" href="https://github.com/Aursus" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:aursus.blog@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.linkedin.com/in/yuji-han/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-gradient-descent.html" title="生物医学工程 | 机器学习 - 凸优化">生物医学工程 | 机器学习 - 凸优化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:50.000Z" title="发表于 2023-12-22 13:10:50">2023-12-22</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">目的：学习optimize objective的有效方法——gradient descent。该方法基于convex function
 Convex Optimization
 本节目标是求解下面optimization problem
 
-其中$\mathscr{C}\subset \mathbb{R}^d$, $F:\mathbb{R}^d \rightarrow \mathbb{R}$。C是convex set，F是convex function
+其中C⊂Rd\mathscr{C}\subset \mathbb{R}^dC⊂Rd, F:Rd→RF:\mathbb{R}^d \rightarrow \mathbb{R}F:Rd→R。C是convex set，F是convex function
 Convex Function和Convex set的定义
 Convex Function定义
 
 Convex Set定义
 
 Convex Function的例子
-$l_2$-norm
-$$
-F(w) = |x|_2^2=x^\top x
-$$
+l2l_2l2​-norm
+F(w)=∥x∥22=x⊤xF(w) = \|x\|_2^2=x^\top x
+F(w)=∥x∥22​=x⊤x
 Logistic
-$$
-F(w;x,y)=\log(1+\exp(-yw^\top x))
-$$
-Mean of Convex Functions
-$$
-F(w) = \frac{1}{m}\sum_{i=1}^mF_i(w)
-$$
-Convex Function的first and second  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-duality.html" title="生物医学工程 | 机器学习 - Duality">生物医学工程 | 机器学习 - Duality</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:23.000Z" title="发表于 2023-12-22 13:10:23">2023-12-22</time></span></div><div class="content">目的：一般算法如MLE只能够求无约束的式子的最优化值，如 $\max_\omega \frac{1}{m}\sum l(\omega; x_i, j_i)$。但是如果我们遇到了有constraint的算法，则需要用Duality，LP，QP来解决这类问题。此外，Duality，LP，QP也可以解决第一类没有constraint的类型
+F(w;x,y)=log⁡(1+exp⁡(−yw⊤x))F(w;x,y)=\log(1+\exp(-yw^\top x))
+F(w;x,y)=log(1+exp(−yw⊤x))
+Mean of ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-duality.html" title="生物医学工程 | 机器学习 - Duality">生物医学工程 | 机器学习 - Duality</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:23.000Z" title="发表于 2023-12-22 13:10:23">2023-12-22</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">目的：一般算法如MLE只能够求无约束的式子的最优化值，如 max⁡ω1m∑l(ω;xi,ji)\max_\omega \frac{1}{m}\sum l(\omega; x_i, j_i)maxω​m1​∑l(ω;xi​,ji​)。但是如果我们遇到了有constraint的算法，则需要用Duality，LP，QP来解决这类问题。此外，Duality，LP，QP也可以解决第一类没有constraint的类型
 Duality Problem
 题目类型
-$$
-\min_\omega J(\omega)\
-\text{s.t. } c_i(\omega)\leq 0 \text{, for } i\in {j}\
+min⁡ωJ(ω)s.t. ci(ω)≤0, for i∈jei(ω)=0, for i∈ϵ——（0）\min_\omega J(\omega)\\
+\text{s.t. } c_i(\omega)\leq 0 \text{, for } i\in {j}\\
 e_i(\omega)= 0 \text{, for } i\in {\epsilon}——（0）
-$$
+
+ωmin​J(ω)s.t. ci​(ω)≤0, for i∈jei​(ω)=0, for i∈ϵ——（0）
 Augmented Lagrange
-$$
-L(\omega, \alpha, \beta) = J(\omega)+\sum_{i\in j}\alpha_i c_i(\omega)+\sum_{i\in \epsilon}\beta_ie_i(\omega)——(1)
-$$
-dual feasbile指 $\alpha_i\geq0, \beta_ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-svm.html" title="生物医学工程 | 机器学习 - 支持向量机 SVM">生物医学工程 | 机器学习 - 支持向量机 SVM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:11.000Z" title="发表于 2023-12-22 13:10:11">2023-12-22</time></span></div><div class="content">Linear SVM
+L(ω,α,β)=J(ω)+∑i∈jα ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-svm.html" title="生物医学工程 | 机器学习 - 支持向量机 SVM">生物医学工程 | 机器学习 - 支持向量机 SVM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:11.000Z" title="发表于 2023-12-22 13:10:11">2023-12-22</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">Linear SVM
 set up
-给了n个数据点 $(x_1, y_1), …, (x_n, y_n)$，$y_i$ 是1或者-1，指示 $x_i$ 属于哪个class。每个 $x_i$ 都是为p-dimension real vector。
-SVM的目标是找到一个maximum-margin hyperplane，能够将所有点 $x_i$ 都按照 $y_i=1$ 和 $y_i=-1$ 分成两组，且使得hyperplane到两组点的nearest point的距离都最大。
+给了n个数据点 (x1,y1),...,(xn,yn)(x_1, y_1), ..., (x_n, y_n)(x1​,y1​),...,(xn​,yn​)，yiy_iyi​ 是1或者-1，指示 xix_ixi​ 属于哪个class。每个 xix_ixi​ 都是为p-dimension real vector。
+SVM的目标是找到一个maximum-margin hyperplane，能够将所有点 xix_ixi​ 都按照 yi=1y_i=1yi​=1 和 yi=−1y_i=-1yi​=−1 分成两组，且使得hyperplane到两组点的nearest point的距离都最大。
 SVM目的：找到一个hyperplane能够maximize margin
 hyperplane定义
-$$
-\omega^\top x_i+b=0
-$$
+ω⊤xi+b=0\omega^\top x_i+b=0
+ω⊤xi​+b=0
 margin定义：距离hyperplane最近的那个点的距离
-$$
-\gamma(w,b)=\min_{i\in[m]}\frac{|w^\top x_i+b|}{|w|_2}
-$$
-Hard Margin SVMs
-假设：数据是可以被hyperplane $\omega_^\top x+b_=0$ 完全分隔的。
-目标：找到一个classifier可以获得maxi ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-ica.html" title="生物医学工程 | 机器学习 - 独立成分分析法 ICA">生物医学工程 | 机器学习 - 独立成分分析法 ICA</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:02.000Z" title="发表于 2023-12-22 13:10:02">2023-12-22</time></span></div><div class="content">概念
+γ(w,b)=min⁡i∈[m]∣w⊤xi+b∣∥w∥2\gamma(w,b)=\min_{i\in[m]}\frac{|w^\top x_ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-ica.html" title="生物医学工程 | 机器学习 - 独立成分分析法 ICA">生物医学工程 | 机器学习 - 独立成分分析法 ICA</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:10:02.000Z" title="发表于 2023-12-22 13:10:02">2023-12-22</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">概念
 目的：source separation
-input：$x\subset \mathbb{R}^d$，有n个x.    $  x^{(i)}.\text{size} = (d,1) $
-output：$s\subset \mathbb{R}^d$，要求s不能是Gaussian分布的，否则无法求出s
-function：$f(x)=s, \text{ s.t. } x^{(i)}=As^{(i)}\text{ or }x=As$
-其中A叫做maxing matrix，W叫做unmixing matrix，$W=A^{-1}$, $s=Wx$, $s_j^{(i)}=\omega_j^Tx^{(i)}$
-$$
-W = \left[
+input：x⊂Rdx\subset \mathbb{R}^dx⊂Rd，有n个x.    $  x^{(i)}.\text{size} = (d,1) $
+output：s⊂Rds\subset \mathbb{R}^ds⊂Rd，要求s不能是Gaussian分布的，否则无法求出s
+function：f(x)=s, s.t. x(i)=As(i) or x=Asf(x)=s, \text{ s.t. } x^{(i)}=As^{(i)}\text{ or }x=Asf(x)=s, s.t. x(i)=As(i) or x=As
+其中A叫做maxing matrix，W叫做unmixing matrix，W=A−1W=A^{-1}W=A−1, s=Wxs=Wxs=Wx, sj(i)=ωjTx(i)s_j^{(i)}=\omega_j^Tx^{(i)}sj(i)​=ωjT​x(i)
+W=[−ω1T−−ω2T−...−ωdT−]W = \left[
 \begin{matrix}
--\omega_1^T-\-\omega_2^T-\…\-\omega_d^T-
-\end{matrix}
-\right]
-$$
-ICA算法
-maximum likelihood estimation｜MLE算法
-假设source 是独立于彼此的，则
-$$
-p(s) = \prod_{j=1}^dp_s(s_j)
-$$
-背景知识 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-pca.html" title="生物医学工程 | 机器学习 - 主成分分析法 PCA">生物医学工程 | 机器学习 - 主成分分析法 PCA</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:09:58.000Z" title="发表于 2023-12-22 13:09:58">2023-12-22</time></span></div><div class="content">概念
+-\omega_1^T-\\-\omega_2^T-\\...\\- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-pca.html" title="生物医学工程 | 机器学习 - 主成分分析法 PCA">生物医学工程 | 机器学习 - 主成分分析法 PCA</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-22T18:09:58.000Z" title="发表于 2023-12-22 13:09:58">2023-12-22</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">概念
 目的：降维
-input $x \subset R^d$，${x^{(i)}; i = 1, …, n}$
-output $Z \subset R^k$
-$F: X \rightarrow Z$, $k&lt;&lt;d$
+input x⊂Rdx \subset R^dx⊂Rd，{x(i);i=1,...,n}\{x^{(i)}; i = 1, ..., n\}{x(i);i=1,...,n}
+output Z⊂RkZ \subset R^kZ⊂Rk
+F:X→ZF: X \rightarrow ZF:X→Z, k&lt;&lt;dk&lt;&lt;dk&lt;&lt;d
 i 表示有几个sample（共n个），j表示有几个feature（共d个）
 preprocess｜数据的预处理
-目的：将所有的feature normalize为mean=$\mathbb{E}[x_j^{(i)}]$=0，variance=$Var[x_j^{(i)}]$=1的数据
+目的：将所有的feature normalize为mean=E[xj(i)]\mathbb{E}[x_j^{(i)}]E[xj(i)​]=0，variance=Var[xj(i)]Var[x_j^{(i)}]Var[xj(i)​]=1的数据
 方法：
-$$
-x_j^{(i)}\leftarrow \frac{x_j^{(i)}-\mu_j}{\sigma_j}\
-\text{where, }\mu_j=\frac{1}{n}\sum_{i=1}^n x_j^{(i)},\ \sigma^2_j=\frac{1}{n}\sum_{i=1}^n(x_{j}^{(i)}-\mu_j)^2
-$$
-如果我们能够确定不同的feature都有相同的scale，则可以表示
-？parameter estimation使用的是EM算法
-计算 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/hexo-bilingual.html" title="hexo-中英双语 hexo+butterfly">hexo-中英双语 hexo+butterfly</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-12T21:47:00.000Z" title="发表于 2023-12-12 16:47:00">2023-12-12</time></span></div><div class="content">前言
+xj(i)←xj(i)−μjσjwhere, μj=1n∑i=1nxj(i), σj2=1n∑i=1n(xj(i)−μj)2x_j^{(i)}\leftarrow \frac{x_j^{(i)}-\mu_j}{\sigma_j}\\
+\text{where, }\m ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/hexo-bilingual.html" title="hexo-中英双语 hexo+butterfly">hexo-中英双语 hexo+butterfly</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-12T21:47:00.000Z" title="发表于 2023-12-12 16:47:00">2023-12-12</time></span></div><div class="content">前言
 为了实现可以切换的中英双语博客，我查阅了网上很多教程。大部分都是使用next主题的，或者使用hexo-generator-i18n。
 经过一番搜寻，我参考 https://shannonhung.github.io/posts/hexo-butterfly-lang-switch/ ，找到了双语切换的解决方案。
 大致思路是通过在github上面建立两个仓库，并分别为中文和英文设置config.yml 和 _config.butterfly.yml。在本地分别设置source-en和source-zh两个文件夹，手动翻译中英文。之所以选择手动翻译，是因为一般自动翻译的api都不尽如人意，只有GPT能达到相对比较理想的效果，但是API收费。
 STEP 1 - 建立第二个仓库
-参考 https://github.com/github/docs/blob/main/content/get-started/quickstart/create-a-repo.md ， 建立repository。这个repository直接命名为类似en, zh, sp等语言简写，这样就会自动生成 https: ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-gaussian.html" title="生物医学工程 | 机器学习 - Gaussian Mixture &amp; EM">生物医学工程 | 机器学习 - Gaussian Mixture &amp; EM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T05:06:55.000Z" title="发表于 2023-12-06 00:06:55">2023-12-06</time></span></div><div class="content">GMM（Gaussian Mixture Model）
+参考 https://github.com/github/docs/blob/main/content/get-started/quickstart/create-a-repo.md ， 建立repository。这个repository直接命名为类似en, zh, sp等语言简写，这样就会自动生成 https: ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-gaussian.html" title="生物医学工程 | 机器学习 - Gaussian Mixture &amp; EM">生物医学工程 | 机器学习 - Gaussian Mixture &amp; EM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T05:06:55.000Z" title="发表于 2023-12-06 00:06:55">2023-12-06</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">GMM（Gaussian Mixture Model）
 什么是高斯混合模型？
 首先我们有k个高斯模型，他们分别为$ N(\mu_1, \sigma_1^2), N(\mu_2, \sigma_2^2), …, N(\mu_k, \sigma_k^2)  $
-我们按照一定的比例从$N(\mu_j, \sigma_j^2)$这个高斯函数中取了比例为$\phi_j$的一些样本。
-按照经验可得，$\sum_{j=1}^{k}\phi_j=1$，即所有比例之和为1。
-$p(z^{(i)}=j)=\phi_j$表示在$z=j$这个cluster的概率，如果是hard assignment，则用$\mathbb{I}({z^{(i)}=j})$表示。如果在这个cluster，即则$z^{(i)}=j$，则概率为1，反之不在这个cluster则为0。
-$p(x^{(i)}|z^{(i)}=j)=p_{norm}(x^{(i)};\mu_j,\sigma_j)$表示在$j$这个高斯分布中的取到$x$的概率，如
-每一个$x^{(i)}$都对应k个$z^{(i)}_j$
-基本参数和分布
-input: $$  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-kmeans.html" title="生物医学工程 | 机器学习 - K means聚类">生物医学工程 | 机器学习 - K means聚类</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T04:44:17.000Z" title="发表于 2023-12-05 23:44:17">2023-12-05</time></span></div><div class="content">K means 聚类
+我们按照一定的比例从N(μj,σj2)N(\mu_j, \sigma_j^2)N(μj​,σj2​)这个高斯函数中取了比例为ϕj\phi_jϕj​的一些样本。
+按照经验可得，∑j=1kϕj=1\sum_{j=1}^{k}\phi_j=1∑j=1k​ϕj​=1，即所有比例之和为1。
+p(z(i)=j)=ϕjp(z^{(i)}=j)=\phi_jp(z(i)=j)=ϕj​表示在z=jz=jz=j这个cluster的概率，如果是hard assignment，则用I(z(i)=j)\mathbb{I}({z^{(i)}=j})I(z(i)=j)表示。如果在这个cluster，即则z(i)=jz^{(i)}=jz(i)=j，则概率为1，反之不在这个cluster则为0。
+p(x(i)∣z(i)=j)=pnorm(x(i);μj,σj)p(x ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-kmeans.html" title="生物医学工程 | 机器学习 - K means聚类">生物医学工程 | 机器学习 - K means聚类</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T04:44:17.000Z" title="发表于 2023-12-05 23:44:17">2023-12-05</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">K means 聚类
 假设
-有$k$个subset $C_1, C_2, C_3, … , C_k$，有$1, …, n$个数据点，且所有数据点满足以下条件：
+有kkk个subset C1,C2,C3,...,CkC_1, C_2, C_3, ... , C_kC1​,C2​,C3​,...,Ck​，有1,...,n1, ..., n1,...,n个数据点，且所有数据点满足以下条件：
 
 每个点都属于一个cluster
 每个cluster都互不重叠
 
 定义距离
-$$Z ( C _ { 1 } , \cdots , C _ { k } ) = \sum _ {l = 1 } ^ { k } \frac { 1 } { 2 | C _ { l } | } \sum _  {i , j \in C _ { l }} { | x _ { i } - x _ j|_2 ^ { 2 }}$$
-where $|C_k|$ denotes the number of observations in the kth cluster.
-目的是最小化每个cluster的pairwise squared distance
-$$Z ( C _ { 1 } , \cdots , C _ { k } ) = \sum _ { l = 1 } ^ { k } \sum _ { i \in C_l } ^ { k } | | x _ { i } ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-logregre.html" title="生物医学工程 | 机器学习 - 逻辑斯蒂回归">生物医学工程 | 机器学习 - 逻辑斯蒂回归</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T04:23:59.000Z" title="发表于 2023-12-05 23:23:59">2023-12-05</time></span></div><div class="content">Logistic
+Z(C1,⋯ ,Ck)=∑l=1k12∣Cl∣∑i,j∈Cl∥xi−xj∥22Z ( C _ { 1 } , \cdots , C _ { k } ) = \sum _ {l = 1 } ^ { k } \frac { 1 } { 2 | C _ { l } | } \sum _  {i , j \in C _ { l }} { \| x _ { i } - x _ j\|_2 ^ { 2 }}
+Z(C1​,⋯,Ck​)=l=1∑k​2∣Cl​∣1​i,j∈Cl​∑​∥xi​−xj​∥22​
+where ∣Ck∣|C_k|∣Ck​∣ denotes the number of observations in the kth cluster.
+目的是最小化每个c ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-logregre.html" title="生物医学工程 | 机器学习 - 逻辑斯蒂回归">生物医学工程 | 机器学习 - 逻辑斯蒂回归</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T04:23:59.000Z" title="发表于 2023-12-05 23:23:59">2023-12-05</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">Logistic
 使用方法：曲线拟合，分两个class，？基本只能处理数据点？
 使用范围：都可以用。基本一根线能分就能分
 input space
-$$
-\mathcal{X}=\mathbb{R}^d
-$$
+X=Rd\mathcal{X}=\mathbb{R}^d
+X=Rd
 label space / output space（y的范围是0到1）
-$$
-\mathcal{Y}=[0,1]
-$$
+Y=[0,1]\mathcal{Y}=[0,1]
+Y=[0,1]
 hypothesis class F
-$$
-\mathcal{F}:={x \mapsto sigmoid(w^\top x+b)\ |\ w\in\mathbb{R}^d,b\in\mathbb{R}},\text{where }sigmoid(a)=\frac{1}{1+\exp(-a)}
-$$
-注：$\omega$：weight vector；$b$：bias
+F:={x↦sigmoid(w⊤x+b) ∣ w∈Rd,b∈R},where sigmoid(a)=11+exp⁡(−a)\mathcal{F}:=\{x \mapsto sigmoid(w^\top x+b)\ |\ w\in\mathbb{R}^d,b\in\mathbb{R}\},\text{where }sigmoid(a)=\frac{1}{1+\exp(-a)}
+ 
+F:={x↦sigmoid(w⊤x+b) ∣ w∈Rd,b∈R},where sigmoid(a)=1+exp(−a)1​
+注：ω\omegaω：weight vector；bbb：bias
 
-decision boundary
-$\dfrac{P(y=1|x)}{P(y=-1|x)}=\dfrac{1+\exp(w^\top x)}{1+\exp(-w^\top x)}=\exp(w^\top x)$的结果表示
-如果$w^\top x=0$，则$P(y=1|x)=P(y=-1|x)$
- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-linear.html" title="生物医学工程 | 机器学习 - 线性回归">生物医学工程 | 机器学习 - 线性回归</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T04:14:31.000Z" title="发表于 2023-12-05 23:14:31">2023-12-05</time></span></div><div class="content">线性回归
+decision boundar ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/ml-linear.html" title="生物医学工程 | 机器学习 - 线性回归">生物医学工程 | 机器学习 - 线性回归</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-12-06T04:14:31.000Z" title="发表于 2023-12-05 23:14:31">2023-12-05</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/">生物医学工程</a></span></div><div class="content">线性回归
 input space
-$$
-\mathcal{X}=\mathbb{R}^d
-$$
+X=Rd\mathcal{X}=\mathbb{R}^d
+X=Rd
 label space / output space（y的范围是0到1）
-$$
-\mathcal{Y}=\mathbb{R}
-$$
+Y=R\mathcal{Y}=\mathbb{R}
+Y=R
 hypothesis class F
-$$
-\mathcal{F}:{x \mapsto\ w^\top x+b | w\in\mathbb{R}^d,b\in\mathbb{R}}
-$$
-loss function($l_2$-loss) square loss
-$$
-\ell(f(x),y)=(f(x)-y)^2\
-$$
+F:{x↦ w⊤x+b∣w∈Rd,b∈R}\mathcal{F}:\{x \mapsto\ w^\top x+b | w\in\mathbb{R}^d,b\in\mathbb{R}\}
+F:{x↦ w⊤x+b∣w∈Rd,b∈R}
+loss function(l2l_2l2​-loss) square loss
+ℓ(f(x),y)=(f(x)−y)2\ell(f(x),y)=(f(x)-y)^2\\
+ℓ(f(x),y)=(f(x)−y)2
 loss function（ absolute loss ）
-$$
-\ell(f(x),y)=|f(x)-y|
-$$
+ℓ(f(x),y)=∣f(x)−y∣\ell(f(x),y)=|f(x)-y|
+ℓ(f(x),y)=∣f(x)−y∣
 Empricial Risk Minizer(convex)
-$$
-\hat R(w)=\frac{1}{m}\sum_{i=1}^m(y_i-w^\top x_i)^2
-$$
-因为上面这个函数时convex，所以我们可以通过求导并使其等于0来求min。通过上述方法从ERM中求出来的w如下（如果$X^TX$可逆的话）
-$$
- ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Aursus</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Aursus" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:aursus.blog@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.linkedin.com/in/yuji-han/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%97%85%E6%B8%B8%E6%94%BB%E7%95%A5/" style="font-size: 1.3em; color: #99a1ac">旅游攻略</a> <a href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">生物医学工程</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">编程</a> <a href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99%E8%AF%AD%E7%AC%94%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">西班牙语笔记</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">17</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">5</span></a></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Aursus</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="中英转换">中</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script data-pjax src="/self/btf.js"></script><script data-pjax src="/self/ch_en.js"></script></div></body></html>
+R^(w)=1m∑i=1m(yi−w⊤xi ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Aursus</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Aursus" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:aursus.blog@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://www.linkedin.com/in/yuji-han/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a></div></div><div class="sticky_layout"><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%A7%A3%E5%89%96%E5%AD%A6-Anatomy/"><span class="card-category-list-name">解剖学 Anatomy</span><span class="card-category-list-count">4</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%97%85%E6%B8%B8%E6%94%BB%E7%95%A5/" style="font-size: 1.3em; color: #99a1ac">旅游攻略</a> <a href="/tags/%E7%94%9F%E7%89%A9%E5%8C%BB%E5%AD%A6%E5%B7%A5%E7%A8%8B/" style="font-size: 1.5em; color: #99a9bf">生物医学工程</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">编程</a> <a href="/tags/%E8%A5%BF%E7%8F%AD%E7%89%99%E8%AF%AD%E7%AC%94%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">西班牙语笔记</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">十二月 2023</span><span class="card-archive-list-count">17</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">三月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">二月 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/12/"><span class="card-archive-list-date">十二月 2022</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/07/"><span class="card-archive-list-date">七月 2022</span><span class="card-archive-list-count">7</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/06/"><span class="card-archive-list-date">六月 2022</span><span class="card-archive-list-count">5</span></a></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Aursus</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="中英转换">中</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script data-pjax src="/self/btf.js"></script><script data-pjax src="/self/ch_en.js"></script></div></body></html>
